@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+for i in "python":
+        if ord(i) < 123 and ord(i) >= 97:
+            print("{}".format(chr(ord(i)+32)), end="")
+        else:
+            print("{}".format(i), end="")
