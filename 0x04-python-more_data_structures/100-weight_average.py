@@ -4,6 +4,8 @@
 def weight_average(my_list=[]):
     if (not my_list):
         return 0
+    if (not isinstance(my_list, list)):
+        return 0
     sum = 0
     weight = 0
     for value in my_list:
