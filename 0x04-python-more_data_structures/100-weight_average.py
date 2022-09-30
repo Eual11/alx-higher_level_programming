@@ -2,7 +2,7 @@ from itertools import count
 
 
 def weight_average(my_list=[]):
-    if (not my_list):
+    if (not len(my_list)):
         return 0
     sum = 0
     weight = 0
