@@ -1,0 +1,62 @@
+The 2-matrix_divided module
+===========================
+
+using ``matrix_divided``
+------------------------
+
+importing module:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Usage
+>>> matrix = [
+...     [3, 6, 9],
+...     [12, 15, 18]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+float point numbers
+>>> matrix = [
+...     [1.1, -2.2, 3.3],
+...     [4.4, 5.5, -6.6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
+
+check if matrix isn't list
+>>> matrix = "not a list"
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+zero division error
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+out of boundary check
+>>> matrix = [
+...     [1, 2, 3, 4],
+...     [5, 6, 7]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+check div not int and float
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, 5, 6]
+... ]
+>>> print(matrix_divided(matrix, "not a number"))
+Traceback (most recent call last):
+TypeError: div must be a number
+
+if an element is not int or float
+>>> matrix = [
+...     [1, 2, 3],
+...     [4, "not a number", 6]
+... ]
+>>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats

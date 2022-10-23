@@ -1,0 +1,37 @@
+The ``0-add_integer`` module
+============================
+
+using ``add_integer``
+---------------------
+
+import 0-add_integer from module
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+check if two integers are added
+>>> add_integer(1, 2)
+3
+
+check if negative number is also accepted
+>>> add_integer(100, -2)
+98
+
+check if only one parameter is allowed
+>>> add_integer(2)
+100
+
+check for floats
+>>> add_integer(100.3, -2)
+98
+
+check if string is allowed as a parameter
+>>> add_integer(4, "school")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+check the above test in reverse
+>>> add_integer("school", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
