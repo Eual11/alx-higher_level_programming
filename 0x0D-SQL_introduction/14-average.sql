@@ -1,2 +1,3 @@
--- computing avarage
-SELECT AVG(score) AS avarage FROM second_table;
+-- computes average
+SELECT AVG(`score`) AS `average`
+FROM `second_table`;
