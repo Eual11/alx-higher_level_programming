@@ -3,7 +3,7 @@
 const size = process.argv[2];
 const c = 'X';
 
-if (size) {
+if (parseInt(size)) {
   let i = 0;
   while (i < size) {
     console.log(c.repeat(size));
